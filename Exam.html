@@ -1,0 +1,29 @@
+<html>
+
+<head>
+ 
+    <link rel="stylesheet" href="Exam.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    
+</head>
+
+<body>
+     <h1 style="position: absolute;left: 20%; top: 7%;font-size: 33px;">Welcome: <span style="color: blanchedalmond;" id="result"></span></h1>
+    <h3 style="position: absolute;left: 50%; top: 9%;"> Exam timer:</h3><p  id="countdown" style="color:#ffffff;position:absolute;left:60%;top:9%;  font-size: 20px;" align="center"> </p>
+    <div id="container">
+        <h1>Welcome to Quiz JavaScript</h1>
+        <br />
+        <div id="quiz"></div>
+        <div class="button" id="next"><a href="#">Next</a></div>
+        <div class="button" id="back"><a href="#">Back</a></div>
+        <div  class="button" id="finish"><a href="#">Finish</a></div>
+    </div>
+    <script>
+        document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="Exam.js"></script>
+</body>
+
+</html>

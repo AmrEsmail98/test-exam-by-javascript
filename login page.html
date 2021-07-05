@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: lightsteelblue;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            padding: 50px;
+            margin: 50px;
+            width: 300px;
+            margin-left: 500px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #b1,
+        #b2 {
+            color: red;
+        }
+    </style>
+
+    <script>
+        //test user and pass valid or not
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+
+            if (name == null || name == "") {
+                alert("Please Enter user name");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+            
+        }
+
+
+
+
+    </script>
+    
+</head>
+
+<body>
+
+    <h1>login page</h1>
+    <form name="myform" method="POST" action="Exam.html" onsubmit="return validateform()">
+        <p id="er"></p>
+        <div id="div">
+            <p>
+                <label> Username:</label>
+                <input type="text" id="name" name="name" placeholder=" Enter your name">
+            </p>
+            <p>
+                <label> password:</label>
+                <input type="password" id="pass" name="password" placeholder="Enter your Password">
+            </p>
+            <input type="submit" id="b1" name="ok" value="OK" data-action="click"/>
+            <input type="reset" id="b2" name="Cancel" value="Cancel" onclick="alert('do you want Cancel form?')">
+        </div>
+    </form>
+
+    <script>
+        document.querySelector('[data-action="click"]').addEventListener('click', function(){
+            var x=document.getElementById("name").value;
+            localStorage.setItem("textvalue",x);
+        });
+
+      
+    </script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
